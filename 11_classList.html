@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- classList.html  -->
+    <article>
+        <h2>Tab</h2>
+        <div class="tab-btn">
+            <a href="#"class="active">Tab01</a>
+            <a href="#">Tab02</a>
+            <a href="#">Tab03</a>
+        </div>
+        <div class="tab-con">
+            <div class="active">A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+    </article>
+
+<!-- style  -->
+
+    <style>
+        article{width:25%; margin:0 auto;}
+        h2{text-align:center;}
+        .tab-btn a{
+            background:#fff; color:#000;
+            border:1px;
+            border-color: purple;
+            padding:20px 20px;
+            display: inline-block;
+            list-style: none;
+            text-decoration: none;
+            }
+        .tab-btn a.active{background:purple; color:#fff;}
+        .tab-con{height:400px;position:relative;}
+        .tab-con div{
+            background: purple;
+            color:#fff;
+            width:100%; 
+            position:absolute; 
+            left:0; top:0;
+            font-size: 300px;
+            text-align: center;
+            display:none;
+            }
+        .tab-con div.active{display: block;}
+    </style>
+
+<!-- script  -->
+        
+    <script>
+        const elTabBtn = document.querySelectorAll('.tab-btn a');
+        const elTabCon = document.querySelectorAll('.tab-con div');
+        let num = 0;
+        
+        for(let i=0; i<elTabBtn.length; i++){
+            elTabBtn[i].addEventListener('click',function(){
+                elTabBtn[num].classList.remove('active');
+                elTabCon[num].classList.remove('active');
+
+                elTabBtn[i].classList.add('active');
+                elTabCon[i].classList.add('active');
+                num = i;
+            })
+        }
+        elTabBtn
+    </script>
+
+<article class="menu">
+    <a class="menu-trigger type7">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <nav>
+        <a href="#">SHOP</a>
+        <a href="#">BRAND</a>
+        <a href="#">LOOKBOOK</a>
+        <a href="#">JAURNAL</a>
+    </nav>
+</article>
+
+<style>
+    .menu{
+        position:fixed;
+        right:0; bottom:0;
+    }
+    .menu nav{
+        background:purple;
+        padding:30px 30px 100px 30px;
+        position:fixed; 
+        right:20px; bottom:0;
+        opacity: 0;
+        transform:translateX(100%);
+        transition:.5s;
+        border-radius:50px 50px 0 0;
+    }
+    .menu nav.active{opacity: 1;transform:translateX(0%);}
+    .menu  a{
+        display:block;
+        color:#fff;
+        line-height:2;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.menu-trigger {
+	position: fixed;
+    right:20px; bottom:20px;
+    z-index:2;
+
+	width: 50px;
+	height: 44px;
+}
+
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #000;
+	border-radius: 4px;
+}
+.menu-trigger.active-7 span{background:#fff;}
+
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top: 20px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+.menu-trigger.type7 span:nth-of-type(1) {
+	-webkit-animation : menu-bar07-01 .75s forwards;
+	animation : menu-bar07-01 .75s forwards;
+}
+@keyframes menu-bar07-01 {
+	0% {
+		transform : translateY(20px) rotate(45deg);
+	}
+	50% {
+		transform : translateY(20px) rotate(0);
+	}
+	100% {
+		transform : translateY(0) rotate(0);
+	}
+}
+.menu-trigger.type7 span:nth-of-type(2) {
+	transition : all .25s .25s;
+	opacity : 1;
+}
+.menu-trigger.type7 span:nth-of-type(3) {
+	-webkit-animation : menu-bar07-02 .75s forwards;
+	animation : menu-bar07-02 .75s forwards;
+}
+
+@keyframes menu-bar07-02 {
+	0% {
+		transform : translateY(-20px) rotate(-45deg);
+	}
+	50% {
+		transform : translateY(-20px) rotate(0);
+	}
+	100% {
+		transform : translateY(0) rotate(0);
+	}
+}
+.menu-trigger.active-7 span:nth-of-type(1) {
+	-webkit-animation : active-menu-bar07-01 .75s forwards;
+	animation : active-menu-bar07-01 .75s forwards;
+}
+
+@keyframes active-menu-bar07-01 {
+	0% {
+		transform : translateY(0) rotate(0);
+	}
+	50% {
+		transform : translateY(20px) rotate(0);
+	}
+	100% {
+		transform : translateY(20px) rotate(45deg);
+	}
+}
+.menu-trigger.active-7 span:nth-of-type(2) {
+	opacity : 0;
+}
+.menu-trigger.active-7 span:nth-of-type(3) {
+	-webkit-animation : active-menu-bar07-02 .75s forwards;
+	animation : active-menu-bar07-02 .75s forwards;
+}
+
+@keyframes active-menu-bar07-02 {
+	0% {
+		transform : translateY(0) rotate(0);
+	}
+	50% {
+		transform : translateY(-20px) rotate(0);
+	}
+	100% {
+		transform : translateY(-20px) rotate(-45deg);
+	}
+}
+
+</style>
+
+<script>
+    const elBurger = document.querySelector('.menu-trigger');
+    const elNav = document.querySelector('.menu nav');
+    elBurger.addEventListener('click',function(){
+        this.classList.toggle('active-7');
+        elNav.classList.toggle('active');
+    })
+</script>
+</body>
+</html>
