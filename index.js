@@ -9,8 +9,8 @@ elErow.addEventListener('click',function(){
 elErow2.addEventListener('click',function(){
     elIntro.classList.remove('active');
 })
-elErow.innerHTML = '<a>▶</a>';
-elErow2.innerHTML = '<a>◀</a>';
+// elErow.innerHTML = '<a>▶</a>';
+// elErow2.innerHTML = '<a>◀</a>';
 //----------포토&비디오버튼----------------------------------------
 const elSvgblue1 = document.querySelector('.p-1')
 const elSvgblue2 = document.querySelector('.p-2')
