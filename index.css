@@ -60,12 +60,8 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
   }
-  body header .head .name .erow a {
-    font-size: 20px;
-    cursor: pointer;
-  }
-  body header .head .name .erow a:after {
-    content: '\25B6';
+  body header .head .name .erow a img {
+    width: 15%;
   }
   body header .head .eye {
     position: relative;
@@ -1636,11 +1632,10 @@
     font-weight: lighter;
   }
   .intro .blueTop ul li:nth-of-type(1) a {
-    font-size: 20px;
-    cursor: pointer;
+    margin-top: 10px;
   }
-  .intro .blueTop ul li:nth-of-type(1) a:after {
-    content: '\25C0';
+  .intro .blueTop ul li:nth-of-type(1) a img {
+    width: 11%;
   }
   .intro .blueTop ul li:nth-of-type(2) {
     width: 7%;

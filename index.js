@@ -1,6 +1,6 @@
 //-----------마이페이지----------------------------------------
-const elErow = document.querySelector('.erow a');
-const elErow2 = document.querySelector('.erow2 a');
+const elErow = document.querySelector('.erow');
+const elErow2 = document.querySelector('.erow2');
 const elIntro = document.querySelector('.intro');
 
 elErow.addEventListener('click',function(){
