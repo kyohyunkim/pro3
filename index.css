@@ -1222,6 +1222,9 @@
   .intro .blueTop ul li:nth-of-type(3) {
     margin-top: -60px;
   }
+  .intro .blueTop ul li:nth-of-type(3) a {
+    color: #fff;
+  }
   .intro .blueTop ul li:nth-of-type(3) div {
     text-align: center;
     font-weight: bold;
