@@ -40,3 +40,47 @@
         }
     }
 }
+
+
+@mixin info2{
+    .box1{
+        display: flex;
+        justify-content: space-between;
+        li:nth-of-type(1){
+            color:#0056ff;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            a{font-size: 20px; cursor: pointer;}
+        }
+        li:nth-of-type(2){
+            font-weight: bolder;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        li:nth-of-type(3){
+            cursor: pointer;
+            width:5%;
+            img{width:100%}
+        }
+    }
+    .in{
+        display: block;
+        &.active{
+            display: block;
+        }
+        .box2{
+            margin:20px 0;
+            li{
+                font-size: 14px;
+                padding-left: 30px;
+            }
+        }
+        .box3{
+            margin-bottom: 20px;
+            span{
+                font-size: 16px;
+                font-family: 'Cormorant Garamond', serif;
+            }
+        }
+    }
+}

@@ -101,7 +101,7 @@ const a= '▼';
 const b = '▲';
 console.log(a);
 
-for(let i=0; i<15; i++){
+for(let i=0; i<10; i++){
     elErowb[i].innerHTML = '<a>▼</a>';
 elErowb[i].addEventListener('click',function(){
     if(a == 0){
